@@ -73,8 +73,10 @@ Group {
  name Layout
  selected true
  xpos -60
- ypos -123
+ ypos -121
  addUserKnob {20 User l Layout}
+ addUserKnob {26 text01 l "" +STARTLINE T "PLACE DISTORT & UNDISTORT NODES INSIDE GROUP BEFORE USING"}
+ addUserKnob {26 "" +STARTLINE}
  addUserKnob {41 channels T STMap6.channels}
  addUserKnob {41 format l "output format" T Reformat8.format}
  addUserKnob {41 lensOut T Switch1.lensOut}
@@ -169,25 +171,6 @@ set N643afe0 [stack 0]
   xpos 834
   ypos 116
  }
- tde4_ldp_classic_3de_mixed {
-  direction undistort
-  tde4_focal_length_cm 1.8
-  tde4_filmback_width_cm 2.376
-  tde4_filmback_height_cm 1.782
-  Distortion 0.1088275202
-  Curvature_X 0.007938023543
-  Curvature_Y -0.004689724805
-  Quartic_Distortion -0.09094313574
-  name tde4_ldp_ra_169_0160_fg01_v1_10
-  xpos 834
-  ypos 184
-  disable true
-  addUserKnob {20 Mash}
-  addUserKnob {26 mashversion l "Version : " T 0002}
-  addUserKnob {1 mashid l "" +STARTLINE +HIDDEN}
-  mashid "f652319d51c81bd12326b543593f88a7/f652319d51c81bd12326b543593f95b4/f652319d51c81bd12326b543593fadc4/f652319d51c81bd12326b543593fba96/Document(\{'comment': 'Re-publish Camera with 1.2 Overscan for Keir 2_Jul_14', 'used': False, 'name': 'New File', 'parent': None, '_rev': '2-af10cb454134d910b311ad30ebc1e2f3', 'tdeSceneVersion': None, '@user': 'neville.freitas', '@date': '2014-07-03T17:54:48', 'path': '/jobs/hun/publish/versions/assets/.assets/8ee1e9a456036614ee94e82109d3fc38.nk', '_id': '8ee1e9a456036614ee94e82109d3fc38', 'type': 'file'\})"
-  addUserKnob {26 creation l "Publish date:" T 2014-07-03T17:54:48}
- }
  NoOp {
   name _put_lens
   tile_color 0xff00bfff
@@ -228,23 +211,6 @@ push $N64977a0
   label "disort here"
   xpos 834
   ypos 474
- }
- tde4_ldp_classic_3de_mixed {
-  tde4_focal_length_cm 1.8
-  tde4_filmback_width_cm 2.376
-  tde4_filmback_height_cm 1.782
-  Distortion 0.1088275202
-  Curvature_X 0.007938023543
-  Curvature_Y -0.004689724805
-  Quartic_Distortion -0.09094313574
-  name tde4_ldp_ra_169_0160_fg01_v1_11
-  xpos 834
-  ypos 552
-  addUserKnob {20 Mash}
-  addUserKnob {26 mashversion l "Version : " T 0002}
-  addUserKnob {1 mashid l "" +STARTLINE +HIDDEN}
-  mashid "f652319d51c81bd12326b543593f88a7/f652319d51c81bd12326b543593f95b4/f652319d51c81bd12326b543593fadc4/f652319d51c81bd12326b543593fba96/Document(\{'comment': 'Re-publish Camera with 1.2 Overscan for Keir 2_Jul_14', 'used': False, 'name': 'New File', 'parent': None, '_rev': '2-af10cb454134d910b311ad30ebc1e2f3', 'tdeSceneVersion': None, '@user': 'neville.freitas', '@date': '2014-07-03T17:54:48', 'path': '/jobs/hun/publish/versions/assets/.assets/8ee1e9a456036614ee94e82109d3fc38.nk', '_id': '8ee1e9a456036614ee94e82109d3fc38', 'type': 'file'\})"
-  addUserKnob {26 creation l "Publish date:" T 2014-07-03T17:54:48}
  }
  NoOp {
   name put_lens__
@@ -352,7 +318,6 @@ set N6511180 [stack 0]
   channels layoutMotion
   channels2 layoutUV
   name Remove2
-  selected true
   xpos 1250
   ypos 1119
   disable {{!outputLayoutChannels}}
